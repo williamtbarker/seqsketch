@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seqsketch"
+version = "0.1.0"
+description = "Deterministic MinHash/LSH indexing and temporal graphs for symbolic sequences"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Will Barker" }]
+keywords = ["minhash", "lsh", "sequence-search", "similarity", "data-engineering"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2",
+  "mypy>=1.11",
+  "pytest>=8.3",
+  "ruff>=0.6",
+  "setuptools>=75",
+  "wheel>=0.44",
+]
+
+[project.scripts]
+seqsketch = "seqsketch.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/williamtbarker/seqsketch"
+Issues = "https://github.com/williamtbarker/seqsketch/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+seqsketch = ["py.typed"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["B", "E", "F", "I", "UP"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+packages = ["seqsketch"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
