@@ -116,15 +116,6 @@ the serialized output. The format is versioned, human-readable JSON and is valid
 This runs formatting, linting, strict type checking, unit and integration tests, source/wheel
 builds, and an end-to-end demo followed by a query and graph inspection.
 
-## Provenance
-
-SeqSketch was reconstructed from earlier sequence-graph experiments involving k-mer MinHash,
-precomputed sketches, LSH candidate retrieval, top-k pruning, and time-aware edge filtering. The
-recovered scripts depended on private tables, hard-coded paths, pickle caches, and inconsistent
-interfaces. This public version reimplements the reusable algorithms around synthetic fixtures and
-portable formats. No private datasets, trained models, credentials, or scientific claims are
-included.
-
 ## Limitations
 
 - Fingerprint collisions are possible, though unlikely with 61-bit values.
