@@ -1,5 +1,8 @@
 # SeqSketch
 
+[![License](https://img.shields.io/github/license/williamtbarker/seqsketch)](https://github.com/williamtbarker/seqsketch/blob/main/LICENSE)
+[![Release](https://img.shields.io/github/v/release/williamtbarker/seqsketch?display_name=tag&sort=semver)](https://github.com/williamtbarker/seqsketch/releases)
+
 [![CI](https://github.com/williamtbarker/seqsketch/actions/workflows/ci.yml/badge.svg)](https://github.com/williamtbarker/seqsketch/actions/workflows/ci.yml)
 [![Python 3.10–3.12](https://img.shields.io/badge/python-3.10--3.12-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -133,4 +136,3 @@ included.
 ## License
 
 MIT. See [LICENSE](LICENSE).
-
